@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #c2c8db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+
+}
+
+form h3 {
+    color: #555;
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.input-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div::after,
+.input-div::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #c2c8db;
+    transition: .3s;
+}
+
+.input-div::after {
+    right: 50%;
+}
+
+.input-div::before {
+    left: 50%;
+}
+
+.input-div.focus .i i {
+    /*Color iconos username y password*/
+    color: #c2c8db;
+}
+
+.input-div.focus div h5 {
+    top: -5px;
+    font-size: 15px;
+}
+
+.input-div.focus::after,
+.input-div.focus::before {
+    width: 50%;
+}
+
+.input-div.one {
+    margin-top: 0;
+}
+
+/* .input-div.two {
+    margin-bottom: 4px;
+} */
+
+
+
+.i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.i i {
+    color: #d9d9d9;
+    transition: .3s;
+}
+
+.input-div>div {
+    position: relative;
+    height: 45px;
+}
+
+.input-div>div h5 {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translatey(-50%);
+    color: #999;
+    font-size: 18px;
+    /*display: none;*/
+    transition: .3s;
+}
+
+input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+
+
+textarea {
+    height: 200px;
+    outline: none;
+    border: none;
+    resize: none;
+    transition: 1s;
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+textarea:focus {
+    background: rgb(236, 227, 227);
+    border-radius: 5px;
+
+}
+
+form button {
+    padding: 15px;
+    background: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 30px auto 0;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: all .5s ease-in-out;
+}
+
+form button:hover {
+    transform: scale(1.1);
+    letter-spacing: 2px;
+}
